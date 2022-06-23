@@ -1,13 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerComponent } from './customer/customer.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { HomeComponent } from './home/home.component';
+import { ListUserComponent } from './list-user/list-user.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 
 const routes: Routes = [
-  {path:'customer', component:CustomerComponent},
+  
   {path:'login', component:LoginComponent},
-  {path:'register', component:RegisterComponent}
+  {path:'register', component:RegisterComponent},
+  {path:'customer-list',component:CustomerListComponent},
+  {path:'list-user', component: ListUserComponent },
+  {path:'customer', component:CustomerComponent},
+  {path:'update-customer',component:UpdateCustomerComponent},
+  {path:'home', component:HomeComponent},
+  { path: 'edit-user', component: EditUserComponent },
+  {path : '', component : LoginComponent, pathMatch:'full'}
 ];
 
 @NgModule({

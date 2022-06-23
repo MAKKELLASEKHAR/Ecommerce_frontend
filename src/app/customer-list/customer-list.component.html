@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+    <div class='table-responsive'>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>password</th>
+                <th>role</th>
+                <th>username</th>
+                <th>email</th>
+                <th>first_name</th>
+                <th>gender</th>
+                <th>last_name</th>
+                <th>mobile_number</th>
+                </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of customers">
+               <td>{{c.id}}</td>
+               <td>{{c.password}}</td>
+               <td>{{c.role}}</td>
+               <td>{{c.username}}</td>
+               <td>{{c.email}}</td>
+               <td>{{c.first_name}}</td>
+               <td>{{c.gender}}</td>
+               <td>{{c.last_name}}</td>
+                <td>{{c.mobile_number}}</td>
+                </tr>
+        </tbody>
+    </table>
+    </div>
+    </div>
+    
+    </div>
+

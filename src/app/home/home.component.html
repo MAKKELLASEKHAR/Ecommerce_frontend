@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+</head>
+<body class="bgimage">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  
+  <a class="navbar-brand" [routerLink]="['home']" [routerLinkActive]="['active']">Home</a>
+
+  
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" (click)="onClick()">User Details List</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link 2</a>
+    </li>
+
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Dropdown link
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link" >About</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link">link4</a>
+      </li>
+
+  </ul>
+  <button class="btn btn-success"  style="margin-left: 20px;position: relative;" (click)="onTouch()"> Update Profile</button>
+  <button class="btn btn-success"  style="margin-left: 20px;position: relative;"> Cart</button>
+  
+</nav>
+<br>
+  
+<div class="container">
+  
+</div>
+
+<!-- </body>
+</html> -->
+<h2 style="color: rgb(223, 139, 139);">Welcome </h2>
+<!-- <img src="/assets/images/home.jpg"> -->
+
+
+<table>
+  <tr>
+      <td>
+          <div class="card">
+              <img src="/assets/images/shirt.jpg" alt="shirt" style="width:5cm;height: 5cm;">
+              <h1>Tailored Shirt</h1>
+              <p class="price">Rs.{{price1}}</p>
+              <p>Some text about the jeans..</p>
+              <p><button>Add to Cart</button></p>
+          </div>
+
+      </td>
+      <td>
+          <div class="card">
+              <img src="/assets/images/tshirt.jpg" alt="shirt" style="width: 5cm;height: 5cm;">
+              <h1>T-Shirt</h1>
+              <p class="price">Rs.{{price2}}</p>
+               <p>Some text about the jeans..</p> 
+              <p><button>Add to Cart</button></p>
+          </div>
+
+      </td>
+      <td>
+
+          <div class="card">
+              <img src="/assets/images/tshirt3.jpg" alt="shirt" style="width:5cm;height:5cm;">
+              <h1>T-Shirt</h1>
+              <p class="price">Rs.{{price3}}</p>
+               <p>Some text about the jeans..</p>
+              <p><button>Add to Cart</button></p>
+          </div>
+
+
+      </td>
+
+  </tr>
+
+</table>
+
+</body>
+</html>
