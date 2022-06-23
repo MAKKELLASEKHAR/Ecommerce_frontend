@@ -1,5 +1,5 @@
 <div class="col-md-6 user-container">
-  <h2 class="text-center">Edit User</h2>
+  <h2 class="text-center">Update User</h2>
   <form  (ngSubmit)="onSubmit()" >
     <div class="hidden">
       <input type="text" formControlName="id" placeholder="id" name="id" class="form-control" id="id">
@@ -10,23 +10,28 @@
     </div>
 
     <div class="form-group">
-      <label for="firstName">First Name:</label>
-      <input formControlName="firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+      <label for="first_name">First Name:</label>
+      <input formControlName="first_name" placeholder="First Name" name="first_name" class="form-control" id="first_name">
     </div>
 
     <div class="form-group">
-      <label for="lastName">Last Name:</label>
-      <input formControlName="lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+      <label for="last_name">Last Name:</label>
+      <input formControlName="lastName" placeholder="Last name" name="last_name" class="form-control" id="last_name">
     </div>
 
     <div class="form-group">
-      <label for="age">Age:</label>
-      <input type="number" formControlName="age" placeholder="age" name="age" class="form-control" id="age">
+      <label for="email">Email:</label>
+      <input type="email" formControlName="email" placeholder="age" name="age" class="form-control" id="age">
     </div>
 
     <div class="form-group">
-      <label for="salary">Salary:</label>
-      <input type="number" formControlName="salary" placeholder="salary" name="salary" class="form-control" id="salary">
+      <label for="mobile_number">Mobile No:</label>
+      <input type="number" formControlName="mobile_number" placeholder="mobile_number" name="mobile_number" class="form-control" id="mobile_number">
+    </div>
+
+    <div class="form-group">
+      <label for="gender">Last Name:</label>
+      <input formControlName="gender" placeholder="Gender" name="gender" class="form-control" id="gender">
     </div>
 
     <button class="btn btn-success">Update</button>
