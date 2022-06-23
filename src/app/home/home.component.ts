@@ -8,26 +8,30 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  price1:number=1999;
-  price2:number=999;
-  price3:number=1499;
+  price1: number = 1999;
+  price2: number = 999;
+  price3: number = 1499;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  onClick():void {
+  onClick(): void {
     this.router.navigate(['list-user'])
   }
-  onTouch():void {
+  onTouch(): void {
     this.router.navigate(['edit-user'])
   }
-
-  
-
-  
-
-
-
-
+  onCheck():void {
+    this.router.navigate(['cart-list'])
+  }
 }
+
+
+
+
+
+
+
+
+
