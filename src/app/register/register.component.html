@@ -67,8 +67,9 @@
                     <div class="col-md-6 mb-4 d-flex align-items-center">
     
                       <div class="form-outline datepicker w-100">
-                        <input type="text" class="form-control form-control-lg" id="username" formControlName="username" name="username" />
                         <label for="username" class="form-label">User Name</label>
+                        <input type="text" class="form-control form-control-lg" id="username" formControlName="username" name="username" />
+                        <div class="error" *ngIf="addCustomerForm.controls['username'].hasError('required') && addCustomerForm.controls['username'].touched" style="color: red">Username is required</div>
                       </div>
     
                     </div>
@@ -77,8 +78,9 @@
                   <div class="col-md-6 mb-4 pb-2">
   
                     <div class="form-outline">
-                      <input type="password" id="password" formControlName="password" name="password" class="form-control form-control-lg" />
                       <label class="form-label" for="password">Password</label>
+                      <input type="password" id="password" formControlName="password" name="password" class="form-control form-control-lg" />
+                      <div class="error" *ngIf="addCustomerForm.controls['password'].hasError('required') && addCustomerForm.controls['password'].touched" style="color: red">Password is required</div>
                     </div>
   
                   </div>
@@ -95,10 +97,11 @@
                     </div> -->
 
                   <div class="col-md-6 mb-4 pb-2">
-
+                    <label for="role" class="form-label">Role</label>
                     <div class="form-outline datepicker w-100">
                       <input type="text" class="form-control form-control-lg" id="role" formControlName="role" name="role"/>
-                      <label for="role" class="form-label">Role</label>
+                      <div class="error" *ngIf="addCustomerForm.controls['role'].hasError('required') && addCustomerForm.controls['role'].touched" style="color: red">Role is required</div>
+                      
                     </div>
   
                   </div>

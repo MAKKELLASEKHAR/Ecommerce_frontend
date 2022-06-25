@@ -17,6 +17,8 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CartListComponent } from './cart-list/cart-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { VendorHomeComponent } from './vendor-home/vendor-home.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BrowserModule } from '@angular/platform-browser';
     UpdateCustomerComponent,
     ListUserComponent,
     CustomerListComponent,
-    CartListComponent
+    CartListComponent,
+    EditUserComponent,
+    VendorHomeComponent
   ],
   imports: [
     BrowserModule,

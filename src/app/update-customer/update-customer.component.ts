@@ -14,29 +14,33 @@ export class UpdateCustomerComponent implements OnInit {
 
   customer!: Customer;
   updatecustomer!: FormGroup;
+  customerId?:any;
 
   constructor(private formBuilder: FormBuilder,private router: Router, private apiService: CustomerApiService) { }
 
   ngOnInit() {
-    let customerId = window.localStorage.getItem("editCustomerId");
-    if(!customerId) {
+    
+     this.customerId = window.localStorage.getItem("editCustomerId");
+     this.apiService.getCustomerById(this.customerId).subscribe(data=>{this.customer=data})
+    if(!this.customerId ) { 
+      // console.log("update-customer")
       alert("Invalid action.")
       this.router.navigate(['customer-list']);
       return;
     }
     this.updatecustomer = this.formBuilder.group({
-      id: [],
+      id: new FormControl('',Validators.required),
       first_name: new FormControl('',Validators.required),
       last_name: new FormControl('',Validators.required),
       email: new FormControl('',Validators.required),
       gender: new FormControl('',Validators.required),
-      username: new FormControl('',Validators.required),
-      password: new FormControl('',Validators.required),
+      // username: new FormControl('',Validators.required),
+      // password: new FormControl('',Validators.required),
       mobile_number: new FormControl('',Validators.required),
-      role: new FormControl('',Validators.required)
+      // role: new FormControl('',Validators.required)
      
     });
-    this.apiService.getCustomerById(+customerId)
+    this.apiService.getCustomerById(this.customerId)
       .subscribe( data => {
         this.updatecustomer.setValue(data.result);
       });
@@ -44,19 +48,16 @@ export class UpdateCustomerComponent implements OnInit {
 
   onSubmit() {
     this.apiService.updateCustomer(this.updatecustomer.value)
-      .pipe(first())
-      .subscribe(
-        data => {
-          if(data.status === 200) {
-            alert('Customer updated successfully.');
-            this.router.navigate(['customer-list']);
-          }else {
-            alert(data.message);
-          }
-        },
-        error => {
-          alert(error);
-        });
+      
+      .subscribe(data => {
+        if(data.status === 200) {
+           alert('Customer updated successfully.');
+           this.router.navigate(['customer-list']);
+        }});
+        
+      
   }
+  
+  
 
 }
