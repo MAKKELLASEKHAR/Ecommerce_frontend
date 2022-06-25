@@ -17,6 +17,10 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CartListComponent } from './cart-list/cart-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { ItemListComponent } from './item-list/item-list.component';
+import { AddItemComponent } from './add-item/add-item.component';
+import { CartComponent } from './cart/cart.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { BrowserModule } from '@angular/platform-browser';
     UpdateCustomerComponent,
     ListUserComponent,
     CustomerListComponent,
-    CartListComponent
+    CartListComponent,
+    ItemListComponent,
+    AddItemComponent,
+    CartComponent,
+    PaymentComponent
   ],
   imports: [
     BrowserModule,

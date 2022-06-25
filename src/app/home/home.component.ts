@@ -8,9 +8,10 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  price1: number = 1999;
-  price2: number = 999;
-  price3: number = 1499;
+  // price1: number = 1999;
+  // price2: number = 999;
+  // price3: number = 1499;
+  //Item!: number;
 
   constructor(private router: Router) { }
 
@@ -25,9 +26,13 @@ export class HomeComponent implements OnInit {
   onCheck():void {
     this.router.navigate(['cart-list'])
   }
+  // onCheck1():void {
+  //   this.router.navigate(['cart-list']);
+  // }
+  onCheck3():void {
+    this.router.navigate(['Item-list']);
+  }
 }
-
-
 
 
 
