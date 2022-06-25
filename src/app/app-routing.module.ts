@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
 import { RegisterComponent } from './register/register.component';
 import { UpdateCustomerComponent } from './update-customer/update-customer.component';
+import { VendorHomeComponent } from './vendor-home/vendor-home.component';
 
 const routes: Routes = [
   
@@ -23,11 +24,16 @@ const routes: Routes = [
   {path:'customer', component:CustomerComponent},
   {path:'update-customer',component:UpdateCustomerComponent},
   {path:'home', component:HomeComponent},
+  {path:'vendorhome', component:VendorHomeComponent},
   { path: 'edit-user', component: EditUserComponent },
   {path : '', component : LoginComponent, pathMatch:'full'},
+<<<<<<< HEAD
   {path:'Item-list', component: ItemListComponent},
   {path:'app-cart', component: CartComponent},
   {path:'app-payment', component: PaymentComponent}
+=======
+  {path:'**',component:LoginComponent},
+>>>>>>> 9a4a3af026e569fab73146ebc9281d66b345a80a
   ];
 
 @NgModule({

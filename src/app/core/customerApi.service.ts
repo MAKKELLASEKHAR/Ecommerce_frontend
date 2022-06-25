@@ -20,23 +20,24 @@ export class CustomerApiService {
     return this.http.post<ApiResponse>('http://localhost:8282/' + 'token/generate-token', loginPayload);
   }
 
-  viewAllCustomer() : Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(this.baseUrl);
+  viewAllCustomer():Observable<any> {
+    return this.http.get<any>(this.baseUrl);
   }
 
-  getCustomerById(id: number): Observable<ApiResponse> {
-    return this.http.get<ApiResponse>(this.baseUrl + id);
+  getCustomerById(id:number):Observable<any> {
+    return this.http.get<any>(this.baseUrl+'/' + id);
   }
 
-  customerRegistration(customer: Customer): Observable<ApiResponse> {
-    return this.http.post<ApiResponse>(this.baseUrl2, customer);
+  customerRegistration(customer:Customer):Observable<any> {
+    return this.http.post<any>(this.baseUrl2, customer);
   }
 
-  updateCustomer(customer: Customer): Observable<ApiResponse> {
-    return this.http.put<ApiResponse>(this.baseUrl + customer.id, customer);
+  updateCustomer(customer:Customer):Observable<any> {
+    return this.http.put<any>(this.baseUrl, customer);
   }
+  
 
-  deleteCustomer(id: number): Observable<ApiResponse> {
-    return this.http.delete<ApiResponse>(this.baseUrl + id);
+  deleteCustomer(id:number):Observable<any> {
+    return this.http.delete<any>(this.baseUrl+'/' + id);
   }
 }

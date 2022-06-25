@@ -5,7 +5,9 @@ import {Observable} from "rxjs/index";
 import { ApiResponse } from '../model/api.response';
 
 
-@Injectable()
+@Injectable({
+  providedIn:'root'
+})
 export class ApiService {
 
   constructor(private http: HttpClient) { }
@@ -33,5 +35,9 @@ export class ApiService {
 
   deleteUser(id: number): Observable<ApiResponse> {
     return this.http.delete<ApiResponse>(this.baseUrl + id);
+  }
+
+  getUsername(name:string): Observable<any> {
+    return this.http.get<any>(this.baseUrl + 'username/'+name);
   }
 }

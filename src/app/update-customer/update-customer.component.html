@@ -12,8 +12,11 @@
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
+                    
                     <input type="text" id="first_name" formControlName="first_name" name="first_name" class="form-control form-control-lg" />
                     <label class="form-label" for="first_name">First Name</label>
+                    <div class="error" *ngIf="updatecustomer.controls['first_name'].hasError('required') && updatecustomer.controls['first_name'].touched" style="color: red">First Name is required</div>
+                    
                   </div>
 
                 </div>
@@ -21,6 +24,7 @@
 
                   <div class="form-outline">
                     <input type="text" id="last_name" formControlName="last_name" name="last_name" class="form-control form-control-lg" />
+                    <div class="error" *ngIf="updatecustomer.controls['last_name'].hasError('required') && updatecustomer.controls['last_name'].touched" style="color: red">Last Name is required</div>
                     <label class="form-label" for="last_name">Last Name</label>
                   </div>
 
@@ -32,6 +36,7 @@
   
                     <div class="form-outline">
                       <input type="email" id="email" formControlName="email" name="email" class="form-control form-control-lg" />
+                      <div class="error" *ngIf="updatecustomer.controls['email'].hasError('required') && updatecustomer.controls['email'].touched" style="color: red">Email is required</div>
                       <label class="form-label" for="email">Email</label>
                     </div>
   
@@ -63,7 +68,7 @@
                 </div>
               </div>
 
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col-md-6 mb-4 d-flex align-items-center">
   
                     <div class="form-outline datepicker w-100">
@@ -82,26 +87,27 @@
                   </div>
 
                 </div>
-              </div>
+              </div> -->
 
                 <div class="row">
                   <div class="col-md-6 mb-4 d-flex align-items-center">
 
                     <div class="form-outline">
                       <input type="tel" id="mobile_number" formControlName="mobile_number" name="mobile_number" class="form-control form-control-lg" />
+                      <div class="error" *ngIf="updatecustomer.controls['mobile_number'].hasError('required') && updatecustomer.controls['mobile_number'].touched" style="color: red">Phone Number is required</div>
                       <label class="form-label" for="mobile_number">Phone Number</label>
                     </div>
   
                   </div>
 
-                <div class="col-md-6 mb-4 pb-2">
+                <!-- <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline datepicker w-100">
                     <input type="text" class="form-control form-control-lg" id="role" formControlName="role" name="role"/>
                     <label for="role" class="form-label">Role</label>
                   </div>
 
-                </div>
+                </div> -->
               </div>
 
               <!-- <div class="row">
@@ -118,8 +124,11 @@
                 </div>
               </div> -->
 
+              <!-- <div class="mt-4 pt-2">
+                <button class="btn btn-outline-light btn-lg px-5" [disabled]="updatecustomer.invalid" type="submit" >Update</button>
+              </div> -->
               <div class="mt-4 pt-2">
-                <input class="btn btn-primary btn-lg" type="update" value="Update" />
+                <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
               </div>
 
             </form>

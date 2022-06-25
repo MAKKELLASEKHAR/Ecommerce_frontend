@@ -21,17 +21,25 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['list-user'])
   }
   onTouch(): void {
-    this.router.navigate(['edit-user'])
+    this.router.navigate(['update-customer'])
   }
   onCheck():void {
     this.router.navigate(['cart-list'])
   }
+<<<<<<< HEAD
   // onCheck1():void {
   //   this.router.navigate(['cart-list']);
   // }
   onCheck3():void {
     this.router.navigate(['Item-list']);
   }
+=======
+
+  // onCheck1():void {
+  //   this.router.navigate(['update-customer'])
+  // }
+  
+>>>>>>> 9a4a3af026e569fab73146ebc9281d66b345a80a
 }
 
 
