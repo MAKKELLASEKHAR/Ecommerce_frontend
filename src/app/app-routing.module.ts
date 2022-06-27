@@ -8,6 +8,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { HomeComponent } from './home/home.component';
 import { ItemListComponent } from './item-list/item-list.component';
+import { ListItemComponent } from './list-item/list-item.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { LoginComponent } from './login/login.component';
 import { PaymentComponent } from './payment/payment.component';
@@ -31,6 +32,7 @@ const routes: Routes = [
   {path:'Item-list', component: ItemListComponent},
   {path:'app-cart', component: CartComponent},
   {path:'app-payment', component: PaymentComponent},
+  {path:'app-list',component:ListItemComponent},
   {path:'**',component:LoginComponent},
 
   ];

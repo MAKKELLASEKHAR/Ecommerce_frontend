@@ -37,6 +37,8 @@ export class AddItemComponent implements OnInit {
 
   onAdd():void {
     alert('Item is Added Successfully');
+    this.addingItem()
+    this.router.navigate(['app-list'])
   }
 
   onSubmit1():void {
