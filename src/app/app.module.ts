@@ -14,18 +14,16 @@ import { ApiService } from './core/api.service';
 import { TokenInterceptor } from './core/interceptor';
 import { ListUserComponent } from './list-user/list-user.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
-import { CartListComponent } from './cart-list/cart-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-<<<<<<< HEAD
+
 import { ItemListComponent } from './item-list/item-list.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { CartComponent } from './cart/cart.component';
 import { PaymentComponent } from './payment/payment.component';
-=======
+
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { VendorHomeComponent } from './vendor-home/vendor-home.component';
->>>>>>> 9a4a3af026e569fab73146ebc9281d66b345a80a
 
 @NgModule({
   declarations: [
@@ -37,16 +35,13 @@ import { VendorHomeComponent } from './vendor-home/vendor-home.component';
     UpdateCustomerComponent,
     ListUserComponent,
     CustomerListComponent,
-    CartListComponent,
-<<<<<<< HEAD
     ItemListComponent,
     AddItemComponent,
     CartComponent,
-    PaymentComponent
-=======
+    PaymentComponent,
     EditUserComponent,
     VendorHomeComponent
->>>>>>> 9a4a3af026e569fab73146ebc9281d66b345a80a
+
   ],
   imports: [
     BrowserModule,

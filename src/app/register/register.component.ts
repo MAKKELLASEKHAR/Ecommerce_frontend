@@ -18,14 +18,9 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.addCustomerForm= this.formBuilder.group({
-      // id: [],
-      // first_name: new FormControl('',Validators.required),
-      // last_name: new FormControl('',Validators.required),
-      // email: new FormControl('',Validators.required),
-      // gender: new FormControl('',Validators.required),
+      
       username: new FormControl('',Validators.required),
       password: new FormControl('',Validators.required),
-      // mobile_number: new FormControl('',Validators.required),
       role: new FormControl('',Validators.required)
 
 
@@ -36,6 +31,7 @@ export class RegisterComponent implements OnInit {
       this.apiService.customerRegistration(this.addCustomerForm.value)
         .subscribe( data => {
           console.log(data)
+          alert('Registered Successfully...');
           this.router.navigate(['']);
         });
     }

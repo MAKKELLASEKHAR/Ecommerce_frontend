@@ -3,3 +3,12 @@
     flex-direction: column;
     margin: auto;
   }
+  .bgimage {
+    background-image: url(/assets/images/userlist.jpg);
+    background-position: center;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #cccccc; */
+
+  }

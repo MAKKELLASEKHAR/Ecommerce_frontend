@@ -25,7 +25,7 @@ export class UpdateCustomerComponent implements OnInit {
     if(!this.customerId ) { 
       // console.log("update-customer")
       alert("Invalid action.")
-      this.router.navigate(['customer-list']);
+      //this.router.navigate(['customer-list']);
       return;
     }
     this.updatecustomer = this.formBuilder.group({
@@ -34,10 +34,8 @@ export class UpdateCustomerComponent implements OnInit {
       last_name: new FormControl('',Validators.required),
       email: new FormControl('',Validators.required),
       gender: new FormControl('',Validators.required),
-      // username: new FormControl('',Validators.required),
-      // password: new FormControl('',Validators.required),
       mobile_number: new FormControl('',Validators.required),
-      // role: new FormControl('',Validators.required)
+
      
     });
     this.apiService.getCustomerById(this.customerId)
@@ -51,11 +49,14 @@ export class UpdateCustomerComponent implements OnInit {
       
       .subscribe(data => {
         if(data.status === 200) {
-           alert('Customer updated successfully.');
-           this.router.navigate(['customer-list']);
+           this.router.navigate(['home']);
         }});
+        alert('Details Updated successfully.');
         
-      
+  }
+  onSubmit1():void {
+    this.router.navigate(['home'])
+
   }
   
   

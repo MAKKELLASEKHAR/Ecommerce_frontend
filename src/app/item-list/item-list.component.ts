@@ -28,7 +28,13 @@ export class ItemListComponent implements OnInit {
   
   add(item:Item):void {
     this.cartservice.add(item);
-    this.router.navigate(['app-cart']);
+    alert('Product Added To Cart');
+    // this.router.navigate(['app-cart']);
+  }
+
+  onSubmit1():void {
+    this.router.navigate(['home'])
+
   }
 
 }

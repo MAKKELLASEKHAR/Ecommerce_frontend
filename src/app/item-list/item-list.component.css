@@ -1,0 +1,9 @@
+.bgimage {
+    background-image: url(/assets/images/item5.jpg);
+    background-position: center;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #cccccc; */
+
+  }
