@@ -8,18 +8,15 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  // price1: number = 1999;
-  // price2: number = 999;
-  // price3: number = 1499;
-  //Item!: number;
+
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
-  onClick(): void {
-    this.router.navigate(['list-user'])
-  }
+  // onClick(): void {
+  //   this.router.navigate(['list-user'])
+  // }
   onTouch(): void {
     this.router.navigate(['update-customer'])
   }
@@ -27,12 +24,12 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['app-cart'])
   }
 
-  onTouch4(): void {
+  // onTouch4(): void {
 
-    this.router.navigate(['add-item']);
+  //   this.router.navigate(['add-item']);
     
 
-  }
+  // }
   onCheck3():void {
     this.router.navigate(['Item-list']);
   }

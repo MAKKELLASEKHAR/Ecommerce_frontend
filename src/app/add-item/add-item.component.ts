@@ -40,7 +40,7 @@ export class AddItemComponent implements OnInit {
   }
 
   onSubmit1():void {
-    this.router.navigate(['home'])
+    this.router.navigate(['vendorhome'])
 
   }
 

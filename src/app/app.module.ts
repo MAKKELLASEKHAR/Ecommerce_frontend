@@ -24,6 +24,7 @@ import { PaymentComponent } from './payment/payment.component';
 
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { VendorHomeComponent } from './vendor-home/vendor-home.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { VendorHomeComponent } from './vendor-home/vendor-home.component';
     CartComponent,
     PaymentComponent,
     EditUserComponent,
-    VendorHomeComponent
+    VendorHomeComponent,
+    AdminPageComponent
 
   ],
   imports: [

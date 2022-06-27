@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddItemComponent } from './add-item/add-item.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 import { CartComponent } from './cart/cart.component';
 import { CustomerListComponent } from './customer-list/customer-list.component';
 import { CustomerComponent } from './customer/customer.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path:'update-customer',component:UpdateCustomerComponent},
   {path:'home', component:HomeComponent},
   {path:'vendorhome', component:VendorHomeComponent},
+  {path:'adminpage', component:AdminPageComponent},
   { path: 'edit-user', component: EditUserComponent },
   {path:'Item-list', component: ItemListComponent},
   {path:'app-cart', component: CartComponent},
